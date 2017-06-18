@@ -1,0 +1,24 @@
+{
+  "name": "reg-dict",
+  "version": "1.0.0",
+  "description": "a dictionary support regexp search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nestattacked/reg-dict.git"
+  },
+  "author": "nestattacked",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nestattacked/reg-dict/issues"
+  },
+  "homepage": "https://github.com/nestattacked/reg-dict#readme",
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-router": "^7.2.1",
+    "promise-mysql": "^3.0.1"
+  }
+}
