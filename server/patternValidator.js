@@ -1,6 +1,6 @@
 module.exports = function(pattern) {
   if(/^\*?\w+\*?$/.test(pattern)) {
-    pattern = pattern.replace('*', '%');
+    pattern = pattern.replace(/\*/g, '%');
   }
   else {
     pattern = '%';

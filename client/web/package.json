@@ -1,0 +1,14 @@
+{
+  "name": "reg-dict-client-web",
+  "version": "1.0.0",
+  "description": "a dictionary supporting regexp search, this is web client",
+  "author": "nestattacked",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-connect": "^5.0.0",
+    "gulp-watch": "^4.3.11"
+  }
+}

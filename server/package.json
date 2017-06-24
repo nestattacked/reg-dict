@@ -1,0 +1,15 @@
+{
+  "name": "reg-dict-server",
+  "version": "1.0.0",
+  "description": "a dictionary supporting regexp search, this is server project",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "author": "nestattacked",
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-router": "^7.2.1",
+    "promise-mysql": "^3.0.1"
+  }
+}
