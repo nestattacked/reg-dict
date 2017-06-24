@@ -1,32 +1,38 @@
 # Server
 
-## Install
-
-### config
+### 1.create config
 
 create server/config.js, you can just copy server/config.example.js and modify it
 
-### database
+### 2.build database
 
+```
 mysql -uusername -p < server/words.sql
+```
 
-### npm package
+### 3.install npm package
 
+```
 cd ./server
 npm install
+```
 
-### run server
+### 4.run server
 
+```
 cd ./server
 npm run start
+```
 
 # Client
 
 ## Web
 
-### install
+### 1.install
 
+```
 npm install
 gulp
+```
 
-the file will be output to build folder
+the file will be output to build folder, copy it to your own web server
