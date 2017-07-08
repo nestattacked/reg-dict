@@ -47,6 +47,6 @@ $('#search-input').keyup(function(){
   debouncedSearch($(this).val());
 });
 
-$('#results').on('click', '.play-button', function(){
+$('#results').on('click', '.result-play-button', function(){
   play($(this).attr('data-url'));
 });
