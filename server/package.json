@@ -4,6 +4,7 @@
   "description": "a dictionary supporting regexp search, this is server project",
   "scripts": {
     "start": "node ./index.js",
+    "pm2start": "pm2 start ./index.js --name regdict-api",
     "dev": "nodemon ./index.js"
   },
   "author": "nestattacked",

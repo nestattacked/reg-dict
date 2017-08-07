@@ -20,6 +20,7 @@ router.get('/regdict/v1/words', async function(ctx) {
   
   let words = await pool.query('select word,us_audio,us_pron,has_audio from words where word like ? order by population desc limit ?,?', [pattern, offset, limit]);
   ctx.body = JSON.stringify(words);
+  ctx.set('Access-Control-Allow-Origin', '*');
 });
 
 //add router
