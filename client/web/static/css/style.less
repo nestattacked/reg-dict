@@ -1,5 +1,5 @@
-@header-height: 70px;
 @logo-height: 50px;
+@logo-width: 150px;
 @controller-height: 40px;
 
 *{
@@ -11,35 +11,52 @@ body{
   padding: 0;
 }
 
+@media screen and (max-width: 800px){
+  #logo-container{
+    text-align:center;
+    padding:20px 0;
+  }
+  #controller-container{
+    padding:0px 30px 30px;
+  }
+}
+
+@media screen and (min-width: 801px){
+  #header{
+    display: flex;
+  }
+  #logo-container{
+    display:flex;
+    padding:10px 40px;
+  }
+  #controller-container{
+    display:flex;
+    flex-grow:1;
+    max-width:500px;
+    align-items:center;
+  }
+  #controller{
+    flex-grow:1;
+  }
+}
+
 #header{
-  height: @header-height;
   box-shadow: 0 1px 3px rgba(203,203,203,0.1), 0 1px 3px rgba(203,203,203,0.2);
   border-bottom: 1px solid #cbcbcb;
 }
 
 #logo{
   height: @logo-height;
-  vertical-align: top;
-  margin-top: (@header-height - @logo-height)/2;
-  margin-left: @logo-height;
 }
 
 #controller{
-  display: inline-block;
+  display:flex;
   height: @controller-height;
-  vertical-align: top;
-  margin-top: (@header-height - @controller-height)/2;
-  margin-left: @controller-height;
-}
-
-#controller button{
-  outline: none;
-  cursor: pointer;
 }
 
 #search-input{
+  flex-grow:1;
   height: @controller-height;
-  width: @controller-height/4*50;
   border: 1px solid #cc0000;
   border-top-left-radius: @controller-height/5;
   border-bottom-left-radius: @controller-height/5;
@@ -48,13 +65,11 @@ body{
   font-size: @controller-height*2/5;
   background: rgba(203,203,203,0.2);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  vertical-align: top;
 }
 
 #help-button{
   width: @controller-height;
   height: @controller-height;
-  vertical-align: top;
   border: none;
   background: #cc0000;
   font-size: @controller-height/2;
@@ -62,6 +77,8 @@ body{
   color: #fff;
   border-top-right-radius: @controller-height/5;
   border-bottom-right-radius: @controller-height/5;
+  outline: none;
+  cursor: pointer;
 }
 
 #results{
