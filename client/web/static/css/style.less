@@ -1,6 +1,7 @@
 @logo-height: 50px;
 @logo-width: 150px;
 @controller-height: 40px;
+@result-height: 20px;
 
 *{
   box-sizing: border-box;
@@ -24,15 +25,16 @@ body{
 @media screen and (min-width: 801px){
   #header{
     display: flex;
+    justify-content:center;
   }
   #logo-container{
     display:flex;
-    padding:10px 40px;
+    padding:10px 40px 10px 0;
   }
   #controller-container{
     display:flex;
     flex-grow:1;
-    max-width:500px;
+    max-width:600px;
     align-items:center;
   }
   #controller{
@@ -82,23 +84,55 @@ body{
 }
 
 #results{
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .result-item{
   max-width: 800px;
   margin:0 auto;
-  padding: 10px 40px;
+  padding: 15px 40px;
   border-bottom: 1px solid #eee;
+  line-height:@result-height;
 }
 
 .result-word{
   display: inline-block;
-  width: 200px;
+  height:@result-height;
+  margin-right:15px;
+  font-weight:bold;
+  font-size:16px;
 }
 
 .result-pron{
   display: inline-block;
-  width: 200px;
   font-family: arial,sans-serif;
+  height:@result-height;
+  margin-right:10px;
+  font-size:16px;
+}
+
+#results{
+  display:none;
+}
+
+.result-play-button{
+  border:none;
+  background:transparent;
+  width:@result-height;
+  height:@result-height;
+  padding:0;
+  cursor:pointer;
+  outline:none;
+  vertical-align:top;
+}
+
+.result-play-button img{
+  width:@result-height;
+  height:@result-height;
+}
+
+.result-definition{
+  display:block;
+  margin-top:5px;
+  font-size:14px;
 }
