@@ -25,7 +25,7 @@ gulp.task('static', ['clean-static'], function(){
 });
 
 gulp.task('css', ['clean-css'], function(){
-  return gulp.src(['static/css/*.less'], {base: './'})
+  return gulp.src(['static/css/*.less', 'static/css/*.css'], {base: './'})
   .pipe(less({
     plugins: [autoprefix]
   }))
