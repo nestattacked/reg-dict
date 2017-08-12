@@ -13,32 +13,44 @@ body{
 }
 
 @media screen and (max-width: 800px){
+  #header{
+    position: fixed;
+    width: 100%;
+  }
   #logo-container{
-    text-align:center;
-    padding:20px 0;
+    text-align: center;
+    padding: 20px 0;
   }
   #controller-container{
-    padding:0px 30px 30px;
+    padding: 0px 30px 30px;
+  }
+  #results{
+    padding-top: 125px + @logo-height;
   }
 }
 
 @media screen and (min-width: 801px){
   #header{
+    position: fixed;
+    width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content: center;
   }
   #logo-container{
-    display:flex;
-    padding:10px 40px 10px 0;
+    display: flex;
+    padding: 10px 40px 10px 0;
   }
   #controller-container{
-    display:flex;
-    flex-grow:1;
-    max-width:600px;
-    align-items:center;
+    display: flex;
+    flex-grow: 1;
+    max-width: 600px;
+    align-items: center;
   }
   #controller{
-    flex-grow:1;
+    flex-grow: 1;
+  }
+  #results{
+    padding-top: 30px + @logo-height;
   }
 }
 
@@ -52,12 +64,12 @@ body{
 }
 
 #controller{
-  display:flex;
+  display: flex;
   height: @controller-height;
 }
 
 #search-input{
-  flex-grow:1;
+  flex-grow: 1;
   height: @controller-height;
   border: 1px solid #cc0000;
   border-top-left-radius: @controller-height/5;
@@ -83,56 +95,52 @@ body{
   cursor: pointer;
 }
 
-#results{
-  padding-top: 10px;
-}
-
 .result-item{
   max-width: 800px;
-  margin:0 auto;
+  margin: 0 auto;
   padding: 15px 40px;
   border-bottom: 1px solid #eee;
-  line-height:@result-height;
+  line-height: @result-height;
 }
 
 .result-word{
   display: inline-block;
-  height:@result-height;
-  margin-right:15px;
-  font-weight:bold;
-  font-size:16px;
+  height: @result-height;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .result-pron{
   display: inline-block;
   font-family: arial,sans-serif;
-  height:@result-height;
-  margin-right:10px;
-  font-size:16px;
+  height: @result-height;
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 #results{
-  display:none;
+  display: none;
 }
 
 .result-play-button{
-  border:none;
-  background:transparent;
-  width:@result-height;
-  height:@result-height;
-  padding:0;
-  cursor:pointer;
-  outline:none;
-  vertical-align:top;
+  border: none;
+  background: transparent;
+  width: @result-height;
+  height: @result-height;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  vertical-align: top;
 }
 
 .result-play-button img{
-  width:@result-height;
-  height:@result-height;
+  width: @result-height;
+  height: @result-height;
 }
 
 .result-definition{
-  display:block;
-  margin-top:5px;
-  font-size:14px;
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
 }
