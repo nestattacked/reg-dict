@@ -32,7 +32,7 @@ function renderSearchResult(result){
 function renderWord(word){
   var playButton;
   if(word.has_audio){
-    playButton = '<button class="result-play-button" data-url="' + word.us_audio + '"><img src="./static/img/play.png"></button>';
+    playButton = '<button class="result-play-button" data-url="' + word.us_audio.replace(/^http/, 'https') + '"><img src="./static/img/play.png"></button>';
   }else{
     playButton = '<span class="result-no-play">暂无发音</span>';
   }

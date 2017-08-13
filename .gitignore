@@ -1,3 +1,5 @@
 node_modules
 /server/config.js
+/client/web/config.js
 /client/web/build
+/client/web/tmp
