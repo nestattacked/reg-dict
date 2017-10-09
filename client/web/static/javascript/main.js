@@ -76,6 +76,10 @@ function readMore(){
   });
 }
 
+function focus(){
+  $('#search-input').focus();
+}
+
 //==================== initilize =====================//
 
 var debouncedSearch = debounce(200, search);
@@ -90,3 +94,4 @@ $('#results').on('click', '.result-play-button', function(){
 
 $('#help-button').click(showHelp);
 $('body').on('click','#readmore-button',readMore);
+$(document).ready(focus);
