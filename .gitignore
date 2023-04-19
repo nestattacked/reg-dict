@@ -1,5 +1,5 @@
 node_modules
+build
+dist
+DS_Store
 /server/config.js
-/client/web/config.js
-/client/web/build
-/client/web/tmp
