@@ -21,7 +21,9 @@ const common: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../html/index.html'),
-      filename: 'index.html'
+      filename: 'index.html',
+      favicon: path.resolve(__dirname, '../src/asset/image/favicon.ico'),
+      publicPath: '/'
     })
   ],
   module: {

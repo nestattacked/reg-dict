@@ -71,11 +71,12 @@ const Words: FunctionComponent<Props> = ({ words, moreWords, searchMoreWords }) 
   };
 
   const wordSections = words.map((word) => {
+    const audioUrl = word.us_audio.replace(/^http/, 'https');
     return (
       <Section key={word.word}>
         <Title>{word.word}</Title>
         <Pronunciation>{`/ ${decodeUnicode(word.us_pron)} /`}</Pronunciation>
-        <Play src={play} onClick={createPlayAudio(word.us_audio.replace(/^http/, 'https'))} />
+        <Play src={play} onClick={createPlayAudio(audioUrl)} />
         <Definition>{decodeUnicode(word.definition)}</Definition>
       </Section>
     );
