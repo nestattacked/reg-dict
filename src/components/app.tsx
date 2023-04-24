@@ -1,16 +1,22 @@
 import React from 'react';
+import type { FunctionComponent } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Home } from './home';
+import { useTitle } from 'react-use';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
-import { black } from '../color';
 
-const Div = styled.div`
-  color: ${black};
-  margin-top: 10px;
-`;
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  }
+]);
 
-const App = () => {
+const App: FunctionComponent = () => {
   const { t } = useTranslation();
-  return <Div>{t('hello')}</Div>;
+  useTitle(t('regdict'));
+
+  return <RouterProvider router={router} />;
 };
 
 export { App };

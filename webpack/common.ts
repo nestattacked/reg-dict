@@ -27,6 +27,10 @@ const common: Configuration = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [

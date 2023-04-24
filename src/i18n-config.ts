@@ -3,7 +3,7 @@ import type { InitOptions } from 'i18next';
 type Language = 'zh';
 
 interface Translation {
-  hello: string;
+  regdict: string;
 }
 
 type Resources = {
@@ -15,7 +15,7 @@ type Resources = {
 const resources: Resources = {
   zh: {
     translation: {
-      hello: '你好'
+      regdict: 'nestattacked | regdict'
     }
   }
 };
