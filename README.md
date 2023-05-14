@@ -2,6 +2,8 @@
 
 regdict是一个开源的英语词典，支持类似于正则表达式规则的查询方式
 
+[demo](https://app.nestattacked.com/regdict)
+
 ## 前置准备
 
 项目需要使用 `node18` 以上版本，可以使用 `nvm` 管理多个 `node` 版本
