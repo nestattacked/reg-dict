@@ -1,0 +1,34 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "standard-with-typescript",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "none"
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/consistent-type-exports": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "react-hooks/exhaustive-deps": "off"
+  }
+}

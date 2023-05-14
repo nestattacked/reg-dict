@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "es5",
+    "strictNullChecks": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "webpack/**/*.ts"
+  ]
+}

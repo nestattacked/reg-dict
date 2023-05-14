@@ -1,5 +1,6 @@
 node_modules
-/server/config.js
-/client/web/config.js
-/client/web/build
-/client/web/tmp
+client/build
+client/src/config.ts
+server/build
+server/src/config.mts
+DS_Store

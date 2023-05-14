@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "server",
+      "program": "${workspaceFolder}/server/src/index.mts",
+      "outFiles": ["${workspaceFolder}/server/build/**/*.mjs"]
+    }
+  ]
+}

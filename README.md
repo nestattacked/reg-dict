@@ -1,53 +1,77 @@
-# Server
+## regdict
 
-### 1.create config
+regdict是一个开源的英语词典，支持类似于正则表达式规则的查询方式
 
-create server/config.js, you can just copy server/config.example.js and modify it
+## 前置准备
 
-### 2.build database
+项目需要使用 `node18` 以上版本，可以使用 `nvm` 管理多个 `node` 版本
 
-```
-mysql -uusername -p < server/words.sql
-```
+如果你使用 `vscode` ，可以安装这些插件：`eslint`、`stylelint`，以开启代码检查功能
 
-### 3.install npm package
+在项目根目录执行 `yarn`
 
-```
-cd ./server
-npm install
-```
+## 客户端
 
-### 4.run server
+### 快速上手
 
-```
-cd ./server
-npm run start
-npm run pm2start (if you use pm2 to manage process)
-```
+进入客户端代码目录
 
-the server is running at port 8000
+`cd client`
 
-# Client
+安装依赖
 
-## Web
+`yarn`
 
-### 1.create config
+准备配置文件
 
-create client/web/config.js, you can just copy client/web/config.example.js and modify it
+拷贝一份 `client/src/config.example.ts` 到 `client/src/config.ts`
 
-### 2.install
+编译
 
-```
-npm install
-gulp
-```
+`yarn build`
 
-the file will be output to ./build, copy ./build/index.html to your own web server and copy ./build/static/* to your static file server(like CDN)
+编译结果存放于 `client/build` 目录下，将里面的所有文件拷贝到你的 Web 服务器上就行
 
-### 3.development
+开发
 
-```
-gulp watch
-```
+`yarn dev`
 
-if you want to start to develop on this project, you can run the command above, the webpage will fresh automatically when you change the code
+支持热加载，修改代码后，自动刷新页面
+
+## 服务端
+
+### 快速上手
+
+进入服务端代码目录
+
+`cd server`
+
+准备数据
+
+参考 `server/data` 准备好你的字典数据
+
+安装依赖
+
+`yarn`
+
+准备配置文件
+
+拷贝一份 `server/src/config.example.mts` 到 `server/src/config.mts`
+
+编译
+
+`yarn build`
+
+编译结果存放于 `server/build` 目录下，`index.mjs` 可以直接被运行
+
+开发
+
+`yarn dev`
+
+支持热加载，修改代码后，自动重新加载
+
+调试
+
+`yarn debug`
+
+执行命令后，在 `vscode` 调试界面启动调试

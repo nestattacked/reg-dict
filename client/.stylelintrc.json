@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "customSyntax": "postcss-styled-syntax",
+  "rules": {
+    "color-hex-length": "long"
+  }
+}

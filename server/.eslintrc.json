@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "standard-with-typescript",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "none"
+      }
+    ],
+    "no-unused-vars": "off",
+    "no-useless-return": "off"
+  },
+  "root": true
+}
